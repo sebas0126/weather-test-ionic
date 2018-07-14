@@ -1,11 +1,39 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Clima local
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="initProcess()">
+        <ion-icon ios="ios-refresh" md="md-refresh"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  
+<ion-content>
+  <ng-container *ngIf="weatherData">
+    <div class="container" [ngClass]="weatherData.icon" padding>
+      <h1>{{weatherData.weather}}</h1>
+      <div class="image">
+        <img [src]="weatherData.image">
+        <img class="back" src="assets/imgs/alertas_ondas.svg" alt="">
+      </div>
+      <strong class="temperature">
+        {{weatherData.temperature}} ºC
+      </strong>
+      <div class="info">
+        <div>
+          <strong>{{weatherData.precipProbability}}%</strong>
+          Rain
+        </div>
+        <div>
+          <strong>{{weatherData.humidity}}%</strong>
+          Humidity
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+
 </ion-content>

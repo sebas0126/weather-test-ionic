@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" x="0px" y="0px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle id="c1" cx="100" cy="100" r="0" stroke="white" stroke-width="1" fill="none" />
+  <circle id="c2" cx="100" cy="100" r="0" stroke="white" stroke-width="1" fill="none" />
+  <circle id="c3"  cx="100" cy="100" r="0" stroke="white" stroke-width="1" fill="none" />
+  <animate 
+    xlink:href="#c1"
+    attributeName="r"
+    from="40"
+    to="100" 
+    dur="5s"
+    begin="0s"
+    repeatCount="indefinite"
+    id="cir1"/>
+   <animate 
+    xlink:href="#c1"
+    attributeName="opacity"
+    from="0.5"
+    to="0" 
+    dur="5s"
+    begin="0s"
+    repeatCount="indefinite"
+    id="cir1"/>
+   <animate 
+    xlink:href="#c1"
+    attributeName="stroke-width"
+    from="0.5"
+    to="0" 
+    dur="5s"
+    begin="0s"
+    repeatCount="indefinite"
+    id="cir1"/>
+  <animate 
+    xlink:href="#c2"
+    attributeName="r"
+    from="40"
+    to="100" 
+    dur="5s"
+    begin="cir1.begin + 1.5s"
+    repeatCount="indefinite"
+    id="cir2"/>
+  <animate 
+    xlink:href="#c2"
+    attributeName="opacity"
+    from="0.5"
+    to="0" 
+    dur="5s"
+    begin="cir1.begin + 1.5s"
+    repeatCount="indefinite"
+    id="cir2"/>
+   <animate 
+    xlink:href="#c2"
+    attributeName="stroke-width"
+    from="0.5"
+    to="0" 
+    dur="5s"
+    begin="cir1.begin + 1.5s"
+    repeatCount="indefinite"
+    id="cir2"/>
+  <animate 
+    xlink:href="#c3"
+    attributeName="r"
+    from="40"
+    to="100" 
+    dur="5s"
+    begin="cir2.begin + 1s"
+    repeatCount="indefinite"
+    id="cir3"/>
+   <animate 
+    xlink:href="#c3"
+    attributeName="opacity"
+    from="0.5"
+    to="0" 
+    dur="5s"
+    begin="cir2.begin + 1s"
+    repeatCount="indefinite"
+    id="cir3"/>
+   <animate 
+    xlink:href="#c3"
+    attributeName="stroke-width"
+    from="0.5"
+    to="0" 
+    dur="5s"
+    begin="cir2.begin + 1s"
+    repeatCount="indefinite"
+    id="cir3"/>
+</svg>

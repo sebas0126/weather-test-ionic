@@ -4,9 +4,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { Diagnostic } from '../../node_modules/@ionic-native/diagnostic';
+import { Diagnostic } from '@ionic-native/diagnostic';
 import { UtilProvider } from '../providers/util/util';
-import { Messages } from '../classes/strings';
+import { Messages, Constants } from '../classes/strings';
 @Component({
   templateUrl: 'app.html'
 })
@@ -14,7 +14,7 @@ export class MyApp {
   rootPage: any = HomePage;
 
   constructor(
-    platform: Platform,
+    private platform: Platform,
     statusBar: StatusBar,
     splashScreen: SplashScreen,
     private diagnostic: Diagnostic,
@@ -34,6 +34,7 @@ export class MyApp {
   }
 
   verifyGPS() {
+    if (!this.platform.is(Constants.PLATFORMS.cordova)) return;
     this.diagnostic.isLocationEnabled().then(res => {
       if (!res) this.utilPrvd.createMessageAlert(Messages.MSG_GPS).then(() => {
         this.diagnostic.switchToLocationSettings();

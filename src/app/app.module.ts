@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -10,7 +11,6 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { UtilProvider } from '../providers/util/util';
 import { WeatherProvider } from '../providers/weather/weather';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,9 +32,9 @@ import { HttpClientModule } from '@angular/common/http';
     SplashScreen,
     Geolocation,
     Diagnostic,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     UtilProvider,
     WeatherProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

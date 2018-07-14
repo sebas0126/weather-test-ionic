@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+import { environment as ENV } from '../../environments/environment';
+
 @Injectable()
 export class WeatherProvider {
 
@@ -9,13 +11,13 @@ export class WeatherProvider {
   ) {
   }
 
-  getWeather(latitude, longitude) {
-    let url = `https://api.darksky.net/forecast/583bf0171d4b4de0d998060b4c8f9ee7/${latitude},${longitude}`
+  getWeather(latitude, longitude): Promise<any> {
+    let url = `${ENV.DARKSKY_API}/${ENV.DARKSKY_TOKEN}/${latitude},${longitude}`
     return this.http.get(url).toPromise();
   }
 
-  getWeatherAlt(latitude, longitude) {
-    let url = `https://fcc-weather-api.glitch.me/api/current?lat=${latitude}&lon=${longitude}`
+  getWeatherBrowser(latitude, longitude): Promise<any> {
+    let url = `${ENV.DARKSKY_PROXY}/${ENV.DARKSKY_TOKEN}/${latitude},${longitude}`
     return this.http.get(url).toPromise();
   }
 

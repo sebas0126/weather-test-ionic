@@ -14,3 +14,27 @@ export class Buttons {
   static ACCEPT = 'Aceptar';
   static CANCEL = 'Cancelar';
 }
+
+export class Constants {
+
+  static PLATFORMS = {
+    cordova: 'cordova'
+  }
+
+  static WEATHER_SRVC = {
+    browser: 'getWeatherBrowser',
+    device: 'getWeather'
+  }
+
+  static WEATHER_IMG = {
+    clearday: 'assets/imgs/1-15.png',
+    clearnight: 'assets/imgs/1-12.png',
+    rain: 'assets/imgs/1-04.png',
+    snow: 'assets/imgs/1-10.png',
+    fog: 'assets/imgs/1-13.png',
+    cloudy: 'assets/imgs/1-17.png',
+    partlycloudyday: 'assets/imgs/1-07.png',
+    partlycloudynight: 'assets/imgs/1-16.png'
+  }
+
+}

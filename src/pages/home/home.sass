@@ -1,0 +1,53 @@
+page-home
+  .container
+    h1
+      color: #505050
+      opacity: 0.5
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    flex-direction: column
+    &.clear-day
+      background: linear-gradient(#a9daea, #fbb03b) 
+    &.clear-night
+      background: linear-gradient(#2f5873, #2fafc1) 
+    &.rain
+      background: linear-gradient(#2fafc1, #a9daea) 
+    &.snow
+      background: linear-gradient(#a9daea, #ffffff) 
+    &.fog
+      background: linear-gradient(#d3d3d3, #a9daea) 
+    &.cloudy
+      background: linear-gradient(#d3d3d3, #ffffff) 
+    &.partly-cloudy-day
+      background: linear-gradient(#d3d3d3, #2fafc1) 
+    &.partly-cloudy-night
+      background: linear-gradient(#d3d3d3, #2f5873) 
+
+  .image
+    position: relative
+    .back
+      position: absolute
+      bottom: 0
+      transform-origin: center
+      transform: scale(1.5)
+
+  .temperature
+    font-size: 5em
+    opacity: 0.5
+
+  .info
+    display: flex
+    justify-content: space-evenly
+    width: 100%
+    color: #505050
+    div
+      display: flex
+      flex-direction: column
+      align-items: center
+      strong
+        font-size: 2em
+
+      

@@ -12,6 +12,14 @@ export class UtilProvider {
   ) {
   }
 
+  toPercentage(value: number) {
+    return "" + Math.trunc(value * 100);
+  }
+
+  convertTemperature(value: number) {
+    return "" + Math.trunc((value - 32) / 1.8);
+  }
+
   createLoading(message: string) {
     return this.loadingCtrl.create({
       content: message,
